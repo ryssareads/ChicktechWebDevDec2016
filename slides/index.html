@@ -1228,6 +1228,606 @@ This is a site about me.
                         <p>Log out of your email, GitHub, and Cloud9.</p>
                     </div>
                 </section>
+                <section data-background-color="#FCE4EC">
+                    <header>
+                        <h2>Day 2</h2>
+                    </header>
+
+                    <div>
+                        <p>Sign in to GitHub</p>
+                        <p>Sign in to Cloud9</p>
+                        <p>Open <a href="">slides</a></p>
+                    </div>
+                </section>
+                <section data-background-color="#FCE4EC">
+                    <section>
+                        <header>
+                            <h2>Recap</h2>
+                        </header>
+                    </section>
+
+                    <section>
+                        <header>
+                            <h3>HTML</h3>
+                        </header>
+                        <p>Made of plaintext, as well as <em>elements</em>
+                            which can be both parents and children</p>
+                        <pre><code>
+&lt;section&gt;
+    <ul>
+        <li>x</li>
+        <li>y</li>
+        <li>z</li>
+    </ul>
+&lt;/section&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>HTML</h3>
+                        </header>
+                        <p>Elements can have <em>attributes</em> which give 
+                            an element a different look or behavior.</p>
+
+                        <pre><code>
+<button onclick="alert('Hi!');" style="font-size:Helvetica;">Hi</button>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>CSS</h3>
+                        </header>
+                        <p>Made up of <em>properties</em> and <em>values</em> that can be applied
+                            to individual elements via the <em>style</em> HTML <em>attribute</em>,
+                            or whole groups of elements via the <em>style</em> HTML <em>element</em>.</p>
+                        <pre><code>
+<style>
+    section {
+        max-width: 50ch;
+    }
+</style>
+<p style="font-size: 1.2em;">Hello, world</p>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>CSS</h3>
+                        </header>
+                        <p>An <em>element</em> will generally inherit CSS properties its
+                            ancestors, but can also override ancestors.</p>
+                        <pre><code>
+&lt;body stye="color: blue;"&gt;
+    &lt;section&gt;
+        <p>What color will this be?</p>
+        &lt;section style="color: red;"&gt;
+            <p>What color will this be?</p>
+        &lt;/section&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>JS</h3>
+                        </header>
+                        <p>One way to use JavaScript is to <em>call</em>
+                            JavaScript <em>functions</em> from special HTML
+                            attributes called <em>event handlers</em>.</p>
+                        <pre><code>
+&lt;button onclick="mailer.send('You've got mail');"
+    onhover="alert('I was hovered over')"&gt;Click me&lt;/button&gt;
+                        </code></pre>
+                    </section>
+                </section>
+                <section data-background-color="#FCE4EC">
+                    <section>
+                        <header>
+                            <h2>Spot the Error</h2>
+                        </header>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;section&gt;
+    <header>
+        <h2>This is a heading</h2>
+    </header>
+    &lt;p&gt;This is a paragraph&lt;p&gt;
+&lt;/section&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;section&gt;
+    <header>
+        &lt;h2&gt;This is a heading&lt;/h1&gt;
+    </header>
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/section&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;header&gt;
+    <style type="text/css">
+        p {
+            font-weight: 700;
+        }
+    </style>
+&lt;/header&gt;
+&lt;body&gt;
+    <p>This is a body paragraph</p>
+&lt;/body&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;body&gt;
+    <p>This is a body paragraph</p>
+    <section>
+        <header>
+            <h2>This is a heading</h2>
+        </header>
+    </section>
+&lt;/body&gt;
+
+&lt;body&gt;
+    <p>This is another body paragraph</p>
+    &lt;section&gt;
+        <header>
+            <h2>This is a heading</h2>
+        </header>
+    &lt;/section&gt;
+&lt;/body&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;body&gt;
+    &lt;header &gt;style="background-color: blue"
+        &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is a body paragraph&lt;/p&gt;
+&lt;/body&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code>
+&lt;body&gt;
+    &lt;header style=&rdquo;background-color: blue&gt;
+        &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is a body paragraph&lt;/p&gt;
+&lt;/body&gt;
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h2>New stuff</h2>
+                        </header>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h2>favorites.html</h2>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>Let's move our "favorites" section to it's own dedicated
+                                page, and add some looks and behavior to it.</p>
+                            <p>First, in Cloud9, right-click the top-most folder and
+                                select New File.</p>
+                            <p>Name it "favorites.html" and hit Enter.</p>
+                            <p>Double-click "favorites.html" to open it.</p>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Create our page outer structure</h2>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+&lt;head&gt;
+    <title>Favorites</title>
+    <style type="text/css">
+        /* We'll fill this out later */
+    </style>
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="page"&gt;
+        &lt;div id="navigation"&gt;
+            &lt;nav&gt;
+                <!-- We'll fill this out later -->
+            &lt;/nav&gt;
+        &lt;/div&gt;
+        &lt;div id="controls"&gt;
+            <!-- We'll fill this out later -->
+        &lt;/div&gt;
+        &lt;div id="content"&gt;
+            <!-- We'll fill this out later -->
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Add a simple navigation</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+&lt;div id="navigation"&gt;
+    <header>
+        <h1>Favorites</h1>
+    </header>
+    &lt;nav&gt;
+        <!-- We'll fill this out later -->
+        <ul>
+            <li>
+                <a href="index.html">About Me</a>
+            </li>
+            <li class="active">
+                <a href="favorites.html">Favorites</a>
+            </li>
+        </ul>
+    &lt;/nav&gt;
+&lt;/div&gt;
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Start filling out the "controls" section</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+&lt;div id="controls"&gt;
+    &lt;header&gt;
+        &lt;h2&gt;Controls&lt;h2&gt;
+    &lt;/header&gt;
+
+    &lt;section class="control"&gt;
+        &lt;header&gt;
+            &lt;h3&gt;New Favorite&lt;h3&gt;
+        &lt;/header&gt;
+
+        <!-- We'll fill this out next -->
+    &lt;section&gt;
+&lt;/div&gt;
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Start building a favorite creation form</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+&lt;section class="control"&gt;
+    &lt;header&gt;
+        &lt;h3&gt;New Favorite&lt;h3&gt;
+    &lt;/header&gt;
+
+    <!-- Add this! -->
+    &lt;form id="creator"&gt;
+        <!-- Add this! -->
+        &lt;fieldset&gt;
+            &lt;label&gt;Title&lt;/label&gt;
+            &lt;input id="creator-title" type="text" /&gt;
+        &lt;/fieldset&gt;
+
+        <!-- We'll put more things in here next -->
+    &lt;/form&gt;
+&lt;section&gt;
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Add more form inputs</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Add this to the form -->
+&lt;fieldset&gt;
+    &lt;label&gt;Description&lt;/label&gt;
+    &lt;div&gt;
+        &lt;textarea id="creator-description" rows="5"&gt;
+        &lt;/textarea&gt;
+    &lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+    &lt;label&gt;Image&lt;/label&gt;
+    &lt;input id="creator-media" type="text" /&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+    <button>Create</button>
+&lt;/fieldset&gt;
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Start filling out the content section</h3>
+                        </header>
+
+                        <p>Our actual favorites will go in the "content" section.</p>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+&lt;div id="content"&gt;
+    <!-- Add this -->
+    <header>
+        <h2>Favorites</h2>
+    </header>
+        
+    <article class="favorite">
+        <!-- We'll fill this out next -->
+    </article>
+&lt;/div&gt;
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Start filling out an empty favorite</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+<article class="favorite">
+    <!-- Add this -->
+    <header>
+        <h3 class="title">
+            <!-- The title of our favorite will go here -->
+        </h3>
+    </header>
+
+    <div class="media">
+        <!-- We'll put the media here next -->
+    </div>
+
+    <p class="description">
+        <!-- We can put comments about our favorite here -->
+    </p>
+</article>
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Embed a GIF of your favorite thing</h3>
+                        </header>
+
+                        <p>Go to <a href="https://giphy.com">Giphy</a>
+                            to search for a GIF of something you like</p>
+                        <p>Copy-paste the embed code into the "media" <em>div.</em>
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+<div class="media">
+    <!-- Add your embed code here -->
+    <iframe src="//giphy.com/embed/13CoXDiaCcCoyk"
+         width="480" height="398" frameBorder="0"
+         class="giphy-embed" allowFullScreen></iframe>
+    <p><a href="http://giphy.com/gifs/wiggle-shaq-13CoXDiaCcCoyk">via GIPHY</a></p>
+</div>
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                    <section data-background-color="#F5F5F5">
+                        <header>
+                            <h3>Also fill out the title and description</h3>
+                        </header>
+
+                        <p>Go to <a href="https://giphy.com">Giphy</a>
+                            to search for a GIF of something you like</p>
+                        <p>Copy-paste the embed code into the "media" <em>div</em>.</p>
+                        <div style="text-align:left;">
+                            <pre><code data-trim no-escape>
+<!-- Other stuff up here -->
+<h3 class="title">Shaq Cat</h3>
+<!-- Other stuff -->
+<p class="description">
+    I love this thing so much.
+</p>
+<!-- Other stuff down here -->
+                            </code></pre>
+                        </div>
+                    </section>
+                </section>
+                <section style="background-color:#FFECB3;">
+                   <section>
+                        <header>
+                            <h2>favorites.js</h2>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>Now we'll use JS to add new favorites to the page when
+                                a new favorite is created on the favorite creator form.</p>
+                            <p>First, in Cloud9, right-click the "js" folder and
+                                select New File.</p>
+                            <p>Name it "favorites.js" and hit Enter.</p>
+                            <p>Double-click "favorites.js" to open it.</p>
+                        </div>
+                    </section>
+                   <section>
+                        <header>
+                            <h3>Define a simple creator function</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>Remember <em>alert</em> and <em>mailer.send</em>?
+                                Those were JavaScript <em>functions</em>.</p>
+                            <p>Let's define our own function to create new favorites.</p>
+                        </div>
+
+                        <pre><code data-trim no-escape>
+function createFavorite() {
+    console.log('Creating a new favorite');
+}
+                        </code></pre>
+                    </section>
+                   <section>
+                        <header>
+                            <h3>Import our JS</h3>
+                        </header>
+
+                        <pre><code data-trim no-escape>
+&lt;head&gt;
+    <!-- Other stuff that was already here -->
+
+    <!-- Add this! -->
+    <script type="text/javascript" src="js/favorites.js"></script>
+&lt;/head&gt;
+<!-- Other stuff that was belo here -->
+                        </code></pre>
+                    </section>
+                   <section>
+                        <header>
+                            <h3>Hook up our JavaScript <em>function</em>
+                                 to our HTML <em>button</em></h3>
+                        </header>
+
+                        <pre><code data-trim no-escape>
+<!-- Find your "creator" form and add an action -->
+<form action="createFavorite();" id="creator">
+    <!-- Other stuff that was here -->
+</form>
+                        </code></pre>
+
+                        <p>Try clicking "Create" button now.
+                            Let's check our JavaScript console
+                            in Chrome Web Inspector!</p>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Clone our initial favorite</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>We going to tell the browser we want to
+                                insert a bunch of new HTML onto the page.</p>
+                            <p>This new HTML will look a lot like our
+                                Shaq-Cat favorite.</p>
+                            <p>We're going to tell Chrome to copy-and-paste
+                                the Shaq-Cat favorite.</p>
+                            <p>First, we need to find the original before we
+                                can make a clone.</p>
+                        </div>
+
+                        <pre><code data-trim no-escape>
+function createFavorite() {
+    // First, we get a list of all elements with class="favorite",
+    // and ask the browser put the list in a variable that we can
+    // easily reference later on.
+    var listOfFavorites = document.getElementsByClassName("favorite");
+
+    console.log(listOfFavorites);
+
+    // To be continued...
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Get the first item in the list</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>The browser gave us back a list with one
+                            favorite in it.</p>
+                            <p>Let's get the one favorite, clone it,
+                            and insert it into the page.</p>
+                        </div>
+
+                        <pre><code data-trim no-escape>
+function createFavorite() {
+    var listOfFavorites = document.getElementsByClassName("favorite");
+
+    // Get the first favorite
+    var theFirstFavorite = listOfFavorites.item(0);
+
+    // Clone the first favorite - this clone will be the new favorite
+    var theNewFavorite = theFirstFavorite.clone(true);
+
+    // Insert our clone onto the page
+    document.getElementById("content").appendChild(clone);
+
+    // To be continued...
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Capture the user's form data</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>We don't want an exact clone of Shaq Cat -
+                                we want to create a new favorite with the user's
+                                input data.</p>
+                            <p>Let's try to capture this data.</p>
+                        </div>
+
+                        <pre><code data-trim no-escape>
+function createFavorite() {
+    // The other stuff that was here
+
+    var newFavoriteTitle = document.getElementById("creator-title").value;
+    var newFavoriteDescription = document.getElementById("creator-description").value;
+
+    console.log("The title of the new favorite is " + newFavoriteTitle);
+    console.log("The description of the new favorite is " + newFavoriteDescription);
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Capture the user's form data</h3>
+                        </header>
+
+                        <div style="text-align:left;">
+                            <p>We don't want an exact clone of Shaq Cat -
+                                we want to create a new favorite with the user's
+                                input data.</p>
+                            <p>Let's try to capture this data.</p>
+                        </div>
+
+                        <pre><code data-trim no-escape>
+function createFavorite() {
+    // The other stuff that was here
+
+    var newFavoriteTitle = document.getElementById("creator-title").value;
+    var newFavoriteDescription = document.getElementById("creator-description").value;
+    var newFavoriteMedia = document.getElementById("creator-media").value;
+
+    // Put our form values in the new favorite
+    theNewFavorite.getElementsByClassName("title")[0].innerHTML = newFavoriteTitle;
+    theNewFavorite.getElementsByClassName("description")[0].innerHTML = newFavoriteDescription;
+    theNewFavorite.getElementsByClassName("media")[0].innerHTML = newFavoriteMedia;
+}
+                        </code></pre>
+                    </section>
+                </section>
 			</div>
 		</div>
 
