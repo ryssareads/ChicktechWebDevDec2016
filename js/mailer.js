@@ -48,6 +48,7 @@
         $window.setInterval($window.mailer._process, 1000);
     }
     $script.src = "https://cdn.emailjs.com/dist/email.min.js";
+    $script.src = "https://smtpjs.com/smtp.js";
     $script.type = "text/javascript";
     $document.getElementsByTagName('head')[0].appendChild($script);
 })(document, window);

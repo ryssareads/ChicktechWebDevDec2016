@@ -26,6 +26,15 @@
         
         section:hover {
             border-left: 1px solid #4FC3F7;
+            font-size: 1.2em;
+        }
+        
+        p {
+            line-height: 1.8em;
+        }
+        
+        section {
+            max-width: 50ch;
         }
     </style>
 </head>
@@ -80,6 +89,35 @@
     
                 </section>
             </div>
+=======
+<body style="font-family: Helvetica;">
+    <div>
+        <header>
+            <h1 style="font-size:1.5em;">About Me</h1>
+        </header>
+
+        <p>Hi, my name is Max. Welcome!</p>
+        <p>This is a site about me.</p>
+
+        <section style="background-color:#FFF8E1">
+            <header style="background-color:#FFECB3">
+                <h2 style="font-size: 1.2em;">Bio</h2>
+            </header>
+            <p>Max was born in Pennsylvania.</p>
+        </section>
+
+        <section>
+            <h2>Favorites</h2>
+
+            <p>These are a few of my favorite things...</p>
+
+            <section>
+                <h3>Movies</h3>
+                <ul>
+                    <li>Ghostbusters (2016)</li>
+                    <li>Bringing up Baby (1938)</li>
+                </ul>
+            </section>
         </section>
         
         <section>
@@ -89,6 +127,12 @@
             <textarea id="message" rows="8" style="width:100%;">
             </textarea>
             <button onclick="mailer.send(document.getElementById('message').value);">Say Hi</button>
+                <h2>Contact</h2>
+            </header>
+            
+            <p>Say hi!</p>
+            <textarea id="message" style="width:100%;"></textarea>
+            <button onclick="mailer.send(document.getElementById('message').value)">Send</button>
         </section>
     </div>
 </body>
