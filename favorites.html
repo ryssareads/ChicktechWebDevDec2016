@@ -1,0 +1,83 @@
+<head>
+    <title>Favorites</title>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript" src="js/favorites.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="navigation">
+            <header>
+                <h1>Favorites</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">About Me</a>
+                    </li>
+                    <li class="active">
+                        <a href="favorites.html">Favorites</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="controls">
+            <header>
+                <h2>Controls<h2>
+            </header>
+        
+            <sectionclass="control">
+                <header>
+                    <h3>New Favorite</h3>
+                </header>
+                <!-- Add this! -->
+                <form action="javascript:createFavorite();" id="creator">
+                    <!-- Add this! -->
+                    <fieldset>
+                        <label>Title</label>
+                        <input id="creator-title" type="text" />
+                    </fieldset>
+            
+                    <!-- We'll put more things down here next -->
+                    <fieldset>
+                        <label>Description</label>
+                        <div>
+                            <textarea id="creator-description" rows="5">
+                            </textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label>Image</label>
+                        <input id="creator-media" type="text" />
+                    </fieldset>
+                    <fieldset>
+                        <button>Create</button>
+                    </fieldset>
+                </form>
+            <section>
+        </div>
+        <div id="content">
+            <!-- Add this -->
+            <header>
+                <h2>Favorites</h2>
+            </header>
+                
+            <article class="favorite">
+                <!-- Add this -->
+                <header>
+                    <h3 class="title">Shaq Cat</h3>
+                </header>
+            
+                <div class="media">
+                    <!-- Add your embed code here -->
+                    <iframe src="//giphy.com/embed/13CoXDiaCcCoyk" width="480" height="398" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+                    <p><a href="http://giphy.com/gifs/wiggle-shaq-13CoXDiaCcCoyk">via GIPHY</a></p>
+                </div>
+
+                <p class="description">
+                    I love this thing so much.
+                </p>
+            </article>
+        </div>
+    </div>
+</body>
